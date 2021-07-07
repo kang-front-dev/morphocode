@@ -1,0 +1,762 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 12px
+}
+
+a {
+    text-decoration: none
+}
+
+li {
+    list-style: none
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto/Roboto-Medium.woff");
+    font-weight: 500
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto/Roboto-Regular.woff");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat/Montserrat-Bold.woff");
+    font-weight: 700
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../fonts/Montserrat/Montserrat-Regular.woff");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url("../fonts/Comfortaa/Comfortaa-Bold.woff");
+    font-weight: 700
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url("../fonts/Comfortaa/Comfortaa-Regular.woff");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("../fonts/FontAwesome/fa-light-300.woff");
+    font-weight: 300
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url("../fonts/FontAwesome/fa-regular-400.woff");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'FontAwesome Brands';
+    src: url("../fonts/FontAwesome/fa-brands-400.woff");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'FontAwesome Duotone';
+    src: url("../fonts/FontAwesome/fa-duotone-900.woff");
+    font-weight: 900
+}
+
+@font-face {
+    font-family: 'FontAwesome Solid';
+    src: url("../fonts/FontAwesome/fa-solid-900.woff");
+    font-weight: 900
+}
+
+@font-face {
+    font-family: 'sailec-medium';
+    src: url("../fonts/Sailec/sailec_medium-webfont.woff");
+    font-weight: 500
+}
+
+@font-face {
+    font-family: 'sailec-regular';
+    src: url("../fonts/Sailec/sailec_regular_italic-webfont.woff");
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'sailec-thin';
+    src: url("../fonts/Sailec/sailec_thin-webfont.woff");
+    font-weight: 300
+}
+
+@font-face {
+    font-family: 'sailec-bold';
+    src: url("../fonts/Sailec/sailec_bold-webfont.woff");
+    font-weight: 700
+}
+
+.fa,
+.far {
+    font-family: 'FontAwesome';
+    font-weight: 400;
+    font-style: normal
+}
+
+.fas {
+    font-family: 'FontAwesome Solid';
+    font-weight: 900;
+    font-style: normal
+}
+
+.fab {
+    font-family: 'FontAwesome Brands';
+    font-weight: 400;
+    font-style: normal
+}
+
+.fad {
+    font-family: 'FontAwesome Duotone';
+    font-weight: 900;
+    font-style: normal
+}
+
+.fal {
+    font-family: 'FontAwesome';
+    font-weight: 300;
+    font-style: normal
+}
+
+.icon__play::before {
+    content: '\f04b'
+}
+
+.icon__play::after {
+    content: '\10f04b'
+}
+
+.icon__film:before {
+    content: '\f008'
+}
+
+.icon__bars::before {
+    content: '\f0c9'
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 0
+}
+
+.header__nav_list {
+    display: flex
+}
+
+.header__nav_link {
+    display: inline-block;
+    position: relative;
+    font-family: 'sailec-medium';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.25px;
+    margin-right: 22px;
+    color: rgba(102, 102, 102, 0.85);
+    transition: color 0.4s;
+    padding: 10px 0;
+    transition: color 0.3s
+}
+
+.header__nav_link:hover {
+    color: #1D6FF3
+}
+
+.header__nav_link:hover>.nav_link-line {
+    width: 100%
+}
+
+.nav_link-line {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    height: 2.5px;
+    width: 0%;
+    background: rgba(102, 102, 102, 0.85);
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out
+}
+
+.logo {
+    text-transform: uppercase;
+    font-family: 'sailec-bold';
+    color: #252525
+}
+
+.content-block {
+    max-width: 450px
+}
+
+.content-img {
+    max-width: 600px
+}
+
+.page-title {
+    font-size: 45px;
+    font-family: sailec-bold;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 58px;
+    letter-spacing: 0.25px;
+    color: #4A4A4A;
+    margin-bottom: 20px
+}
+
+.content-title {
+    font-family: sailec-bold;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 37px;
+    line-height: 58px;
+    letter-spacing: 0.25px;
+    color: #4A4A4A;
+    margin-bottom: 20px
+}
+
+.content-text {
+    font-family: 'sailec-thin';
+    font-size: 18px;
+    line-height: 30px;
+    color: #434A54;
+    margin-bottom: 30px
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.header__content_textblock {
+    max-width: 522px
+}
+
+.header__content_img {
+    height: 600px;
+    width: 600px
+}
+
+.email_input {
+    display: flex;
+    justify-content: flex-start
+}
+
+.email_text {
+    outline: none;
+    box-shadow: none;
+    height: 42px;
+    border-radius: 4px;
+    background: white;
+    font-size: 18px;
+    padding: 0.4em 0.7em;
+    width: 300px;
+    border: 1px solid #979797;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none
+}
+
+.email_submit {
+    cursor: pointer;
+    outline: none;
+    background-color: #1d6ff3;
+    border: none;
+    letter-spacing: 0.8px;
+    padding: 0 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 42px;
+    color: white;
+    font-family: Comfortaa;
+    font-weight: 700
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none
+}
+
+ul {
+    list-style: none
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto
+}
+
+.header {
+    position: relative
+}
+
+.sign-link {
+    background: #1D6FF3;
+    padding: 15px 45px;
+    border-radius: 5px;
+    margin-top: 25px;
+    top: 0;
+    left: 90%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Comfortaa;
+    color: white;
+    font-size: 1em
+}
+
+.login-block {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 350px;
+    background: white;
+    border: 5px linear-gradient(to bottom, #307af1, #6198f0) solid;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.login-title {
+    align-self: flex-start;
+    font-family: Comfortaa;
+    border-left: 5px #4A4A4A solid;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+    background: white;
+    padding-left: 45px
+}
+
+.login-container {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background: rgba(94, 94, 94, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2
+}
+
+.login-btn {
+    width: 120px;
+    height: 50px;
+    background: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border: 2px #4A4A4A solid;
+    overflow: hidden;
+    position: relative;
+    color: #4A4A4A;
+    font-family: Comfortaa;
+    transition: background 0.3s
+}
+
+.login-btn:hover {
+    background: #979797;
+    color: whitesmoke
+}
+
+.login-link {
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: sailec-thin;
+    font-weight: 700;
+    transition: color 0.3s
+}
+
+.login-link:hover {
+    color: black
+}
+
+.reg-link {
+    background: #4A4A4A;
+    width: 85px;
+    height: 85px;
+    border-radius: 50rem;
+    position: absolute;
+    top: 40px;
+    left: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.reg-link_plus {
+    color: white;
+    font-size: 25px
+}
+
+.reg-container {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    background: rgba(94, 94, 94, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2
+}
+
+.input-login {
+    width: 240px;
+    height: 50px;
+    margin-bottom: 30px;
+    font-family: Comfortaa;
+    color: #4A4A4A;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    padding-left: 10px;
+    background: none;
+    border-bottom: 2px #4A4A4A solid
+}
+
+.input-login::-moz-placeholder {
+    color: #c2c2c2
+}
+
+.input-login:-ms-input-placeholder {
+    color: #c2c2c2
+}
+
+.input-login::placeholder {
+    color: #c2c2c2
+}
+
+.main__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main__content_img {
+    background: url("../images/main1.webp");
+    height: 589px;
+    width: 590px
+}
+
+.special_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main__content_textblock {
+    max-width: 458px
+}
+
+.main__content_text1 {
+    font-family: 'sailec-bold';
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.25px;
+    color: #4A4A4A;
+    margin-bottom: 15px
+}
+
+.main__content_text2 {
+    font-family: 'sailec-thin';
+    font-size: 18px;
+    line-height: 30px;
+    color: #434A54;
+    margin-bottom: 58px
+}
+
+.main_link {
+    font-family: sailec-thin;
+    display: inline-block;
+    font-weight: 500;
+    padding: 15px 45px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.3px;
+    border-radius: 5px;
+    color: #1D6FF3;
+    background: white;
+    box-shadow: 6px 6px 12px #949494,
+        -6px -6px 12px #ffffff;
+    transition: background 0.5s, color 0.2s, border 0.3s, box-shadow 0.3s;
+    border: rgba(230, 230, 230, 0.9) 2px solid;
+    position: relative
+}
+
+.main_link-shadow {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-shadow: none;
+    transition: box-shadow 0.3s
+}
+
+.main_link:hover>.main_link-shadow {
+    box-shadow: inset 7px 7px 14px #144eaa,
+        inset -7px -7px 14px #5d96f3
+}
+
+.main_link:hover {
+    background: #1D6FF3;
+    border: rgba(220, 220, 220, 0.95) 2px solid;
+    color: white;
+    box-shadow: none
+}
+
+.main__content_sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.main__content_sec_img {
+    background: url("../images/main2.webp");
+    height: 600px;
+    width: 600px
+}
+
+.main__content_sec_textblock {
+    max-width: 500px
+}
+
+.main__content_sec_text1 {
+    font-family: sailec-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.25px;
+    color: #4A4A4A;
+    margin-bottom: 20px
+}
+
+.main__content_sec_text2 {
+    font-family: sailec-thin;
+    font-size: 18px;
+    line-height: 30px;
+    color: #434A54;
+    margin-bottom: 59px
+}
+
+.main__content_third {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+
+.main__content_third-title {
+    font-family: sailec-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.25px;
+    color: #4d4d4d;
+    margin-bottom: 35px;
+    margin-top: 60px
+}
+
+.main__card {
+    max-width: 330px;
+    position: relative
+}
+
+.main__card_img {
+    width: 330px;
+    height: 186px
+}
+
+.main__card_text {
+    z-index: 2;
+    width: 280px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: -50px;
+    left: 25px;
+    padding: 20px 21px 14px 20px;
+    display: inline-block;
+    position: relative;
+    border: 2px transparent solid;
+    transition: transform 0.35s, border 0.3s ease-in-out
+}
+
+.main__card_text::after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 7px 7px 68px #949494;
+    opacity: 0;
+    transition: opacity 0.3s, border 0.5s ease-in-out
+}
+
+.main__card_text:hover::after {
+    opacity: 1
+}
+
+.main__card_text:hover {
+    transform: scale(1.05);
+    border: rgba(240, 240, 240, 0.8) 2px solid
+}
+
+.main__card_line {
+    background: rgba(0, 0, 0, 0.1);
+    height: 2px;
+    width: 30px
+}
+
+.main__card_text1 {
+    font-family: sailec-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.25px;
+    color: #4A4A4A;
+    margin-bottom: 7px
+}
+
+.main__card_text2 {
+    font-family: sailec-thin;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 9px;
+    color: #4A4A4A
+}
+
+.main_topics-img {
+    width: 120px
+}
+
+.main_topics-title {
+    color: #4a4a4a;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: Roboto;
+    letter-spacing: 1.5px;
+    text-align: center
+}
+
+.main_topics-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 35px;
+    padding-bottom: 100px
+}
+
+.main_topics-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 190px
+}
+
+.main_topics-text {
+    color: #4a4a4a;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    margin-top: 15px
+}
+
+.main_cartography {
+    background: #e3eeff;
+    padding: 30px 0
+}
+
+.main_course {
+    padding: 80px 0;
+    background: #f0f0f0
+}
+
+.main_course-video {
+    width: 600px
+}
+
+.main_course-title {
+    font-family: sailec-bold;
+    font-size: 35px;
+    color: #4A4A4A;
+    margin-bottom: 21px
+}
+
+.main_course-text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #4A4A4A;
+    margin-bottom: 39px
+}
+
+.main_rabbit {
+    padding: 60px
+}
+
+.footer {
+    background: #f0f0f0;
+    padding: 80px 0
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.learning-block {
+    max-width: 450px
+}
+
+.learning-block_title {
+    font-family: sailec-bold;
+    font-size: 40px;
+    color: #4A4A4A;
+    margin-bottom: 16px
+}
+
+.learning-block_text {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    color: #4A4A4A;
+    line-height: 30px
+}
